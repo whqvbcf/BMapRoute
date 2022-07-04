@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+
+    <FrameLayout
+        android:id="@+id/username_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="0dp"
+        android:gravity="center">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地点信息："
+                android:textColor="#95A1AA"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#95A1AA"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_icon"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            >
+
+            <!--搜索编辑框-->
+            <EditText
+                android:id="@+id/login_input_username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edittext_selector"
+                android:hint="搜地点、查公交、找路线"
+                android:minHeight="40dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="60dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="#95A1AA"
+                android:textCursorDrawable="@drawable/edittext_cursor" />
+
+            <!--用户图标-->
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/ic_launcher"
+                android:visibility="visible" />
+
+            <!--搜索按钮-->
+            <Button
+                android:id="@+id/bt_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/icon_bus_station" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!--实时交通地图-->
+    <ImageButton
+        android:id="@+id/ib_traffic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="7dp"
+        android:background="@mipmap/traffic_light"
+        android:scaleType="fitXY" />
+
+    <!--卫星模式和普通模式切换-->
+    <ImageButton
+        android:id="@+id/ib_mode"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="7dp"
+        android:background="@mipmap/switch_model"
+        android:scaleType="fitXY" />
+
+    <!--回到当前位置-->
+    <!--<ImageButton-->
+    <!--android:id="@+id/ib_loc"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginLeft="7dp"-->
+    <!--android:layout_marginBottom="80dp"-->
+    <!--android:background="@mipmap/goback_current_location" />-->
+
+</RelativeLayout>
